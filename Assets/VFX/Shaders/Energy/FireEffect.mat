@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FireEffect
+  m_Shader: {fileID: -6465566751694194690, guid: 087bc22d624bb4f4a9c7efc3c0670f48,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_E2A19BF5:
+        m_Texture: {fileID: 2800000, guid: a6787070779a755459c807ec5f99bda8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_241D3CCC: 0
+    - Vector1_9659C166: 25
+    - Vector1_A97C1B65: 0
+    - Vector1_B9436CA3: 6
+    - Vector1_BF830588: 0.3
+    - Vector1_CF73F39F: 0
+    - Vector1_E0072FCA: 4
+    - Vector1_E4268780: 1.4
+    m_Colors:
+    - Color_4302D58: {r: 5.992157, g: 0.1254902, b: 0, a: 0}
+    - Color_B9038DCD: {r: 11.984314, g: 2.447059, b: 0, a: 0}
+    - Color_FD2B328D: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_634B8EEA: {r: 0, g: -1.5, b: 0, a: 0}
+    - Vector2_971D3817: {r: -0.1, g: 0.1, b: 0, a: 0}
