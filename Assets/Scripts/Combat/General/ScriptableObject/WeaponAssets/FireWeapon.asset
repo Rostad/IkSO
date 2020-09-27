@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa8b2cb35209524ea4e5499eaafb698, type: 3}
   m_Name: FireWeapon
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8154474086225524850, guid: 63d4dbc50f54c194c8707cc4380cac3f,
+  projectile: {fileID: 4830328477810144316, guid: a96e8de4c9496864e86c82908cff388f,
     type: 3}
   projectileSpeed: 10
