@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightningEffect
+  m_Name: NuclearEffect
   m_Shader: {fileID: -6465566751694194690, guid: 087bc22d624bb4f4a9c7efc3c0670f48,
     type: 3}
   m_ShaderKeywords: 
@@ -26,16 +26,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_241D3CCC: 0
-    - Vector1_9659C166: 10
+    - Vector1_9659C166: 20
     - Vector1_A97C1B65: 0
-    - Vector1_B9436CA3: 5
-    - Vector1_BF830588: 1.61
+    - Vector1_B9436CA3: 4
+    - Vector1_BF830588: 1
     - Vector1_CF73F39F: 0
-    - Vector1_E0072FCA: 4
-    - Vector1_E4268780: 1.2
+    - Vector1_E0072FCA: 7.79
+    - Vector1_E4268780: -0.4
     m_Colors:
-    - Color_4302D58: {r: 0.1882353, g: 0.07431384, b: 0, a: 0}
-    - Color_B9038DCD: {r: 31.999996, g: 23.790573, b: 0, a: 0}
+    - Color_4302D58: {r: 0.09165022, g: 0, b: 0.101960786, a: 0}
+    - Color_B9038DCD: {r: 0.0910983, g: 3.9999995, b: 0, a: 0}
     - Color_FD2B328D: {r: 0, g: 0, b: 0, a: 0}
-    - Vector2_634B8EEA: {r: -1, g: 2, b: 0, a: 0}
-    - Vector2_971D3817: {r: -0.1, g: 0.1, b: 0, a: 0}
+    - Vector2_634B8EEA: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_971D3817: {r: -0.5, g: 0.5, b: 0, a: 0}

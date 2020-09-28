@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 988570099801923824}
   - component: {fileID: 4407484065981553298}
   - component: {fileID: 3974739676373838104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4773,7 +4773,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6769345895370809203}
   - component: {fileID: 4830328477810144316}
-  m_Layer: 0
+  - component: {fileID: 855973847}
+  - component: {fileID: 4658888250815059533}
+  m_Layer: 8
   m_Name: FireBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4788,7 +4790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4858789447457842699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0873322, y: 6.265163, z: 15.601436}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3660369593424443637}
@@ -4807,6 +4809,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc661154fa373e84e8218bde934b4cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &855973847
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4858789447457842699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.45
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4658888250815059533
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4858789447457842699}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6102624891519017710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,7 +4849,7 @@ GameObject:
   - component: {fileID: 3660369593424443637}
   - component: {fileID: 2404683932551844956}
   - component: {fileID: 2251387740809341434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9579,7 +9610,7 @@ GameObject:
   - component: {fileID: 7654141205825088937}
   - component: {fileID: 5093234047413367145}
   - component: {fileID: 2606562227483959424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
