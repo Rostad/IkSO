@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class HealthDisplay : MonoBehaviour
 {
 
-    private Text healthText;
+    private Slider healthSlider;
 
     // Start is called before the first frame update
     void Start()
     {
         var health = GameObject.Find("Player").GetComponent<Health>();
         health.OnHealthChanged += OnHealthChanged;
-        healthText = GetComponent<Text>();
+        healthSlider = GetComponent<Slider>();
     }
 
 
 
     private void OnHealthChanged(object Sender, Health.OnHealthChangedEventArgs e)
     {
-        healthText.text = e.newHealthAmount + " / " + e.maxHealthAmount;
+        healthSlider.value = (float)e.newHealthAmount / e.maxHealthAmount;
     }
 }
