@@ -6,6 +6,8 @@ using System;
 public class WeaponHandler : MonoBehaviour
 {
 
+    public int damageLevelMultiplier;
+
     public Weapon fireWeapon;
     public Weapon radiationWeapon;
     public GameObject weaponOrigin;
@@ -25,7 +27,16 @@ public class WeaponHandler : MonoBehaviour
 
     public void OnShoot(object sender, Player.OnShootEventArgs e)
     {
-        currentWeapon.Shoot(weaponOrigin.transform.forward, weaponOrigin.transform.position, e.shooter);
+        int bonusDamage;
+        if(currentWeapon == fireWeapon)
+        {
+            bonusDamage = damageLevelMultiplier * e.fireLevel;
+        } 
+        else
+        {
+            bonusDamage = damageLevelMultiplier * e.nuclearLevel;
+        }
+        currentWeapon.Shoot(weaponOrigin.transform.forward, weaponOrigin.transform.position, e.shooter, bonusDamage);
     }
 
     public void OnAttributeChange(object sender, EventArgs e)

@@ -9,6 +9,8 @@ public class Player : MonoBehaviour, IDamageable
     public event EventHandler OnAttributeChange;
     public event EventHandler<OnLevelChangeEventArgs> OnLevelChange;
 
+    public static Player instance;
+
 
     private float timeOfNextShot = -1f;
     private WeaponHandler weaponHandler;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         levelHandler = new LevelHandler(this);
         attributeType = AttributeType.Fire;
         weaponHandler = GetComponent<WeaponHandler>();
@@ -49,11 +52,15 @@ public class Player : MonoBehaviour, IDamageable
             health.RemoveHealth(damageAmount);
             levelHandler.DecreaseLevel(damageAmount, attributeType);
         }
+        else
+        {
+            levelHandler.IncreaseLevel(damageAmount, attributeType);
+        }
     }
 
-    public void DamageCallback(int damageDealt, AttributeType damageType)
+    public bool IsPlayer()
     {
-        levelHandler.IncreaseLevel(damageDealt, damageType);
+        return true;
     }
 
 
@@ -89,6 +96,8 @@ public class Player : MonoBehaviour, IDamageable
             this.player = player;
             fireExperience = 0;
             nuclearExperience = 0;
+            player.OnLevelChange?.Invoke(this, new OnLevelChangeEventArgs { attributeType = AttributeType.Nuclear, experience = nuclearExperience, level = NuclearLevel });
+            player.OnLevelChange?.Invoke(this, new OnLevelChangeEventArgs { attributeType = AttributeType.Fire, experience = nuclearExperience, level = NuclearLevel });
         }
 
         public void IncreaseLevel(int damageDealt, AttributeType damageType)
@@ -98,7 +107,7 @@ public class Player : MonoBehaviour, IDamageable
                 fireExperience += damageDealt;
                 if (fireExperience > MAX_EXPERIENCE)
                     fireExperience = MAX_EXPERIENCE;
-                player.OnLevelChange?.Invoke(this, new OnLevelChangeEventArgs { attributeType = AttributeType.Fire, experience = nuclearExperience, level = NuclearLevel });
+                player.OnLevelChange?.Invoke(this, new OnLevelChangeEventArgs { attributeType = AttributeType.Fire, experience = fireExperience, level = FireLevel });
             }
             else
             {
@@ -116,7 +125,7 @@ public class Player : MonoBehaviour, IDamageable
                 fireExperience -= damageDealt;
                 if (fireExperience < 0)
                     fireExperience = 0;
-                player.OnLevelChange?.Invoke(this, new OnLevelChangeEventArgs { attributeType = AttributeType.Fire, experience = nuclearExperience, level = NuclearLevel });
+                player.OnLevelChange?.Invoke(this, new OnLevelChangeEventArgs { attributeType = AttributeType.Fire, experience = fireExperience, level = FireLevel });
             }
             else
             {
@@ -139,6 +148,6 @@ public class Player : MonoBehaviour, IDamageable
     {
         public AttributeType attributeType;
         public float experience;
-        public float level;
+        public int level;
     }
 }

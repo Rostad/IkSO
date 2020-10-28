@@ -15,5 +15,6 @@ public abstract class Weapon : ScriptableObject
         get { return 60f / RPM; }
     }
 
-    public abstract void Shoot(Vector3 direction, Vector3 origin, IDamageable shooter);
+    public abstract void Shoot(Vector3 direction, Vector3 origin, IDamageable shooter, int bonusDamage);
+ 
 }

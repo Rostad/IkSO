@@ -8,7 +8,7 @@ public class ProjectileWeapon : Weapon
     public SimpleProjectile projectile;
     public float projectileSpeed;
 
-    public override void Shoot(Vector3 direction, Vector3 origin, IDamageable shooter)
+    public override void Shoot(Vector3 direction, Vector3 origin, IDamageable shooter, int bonusDamage)
     {
 
         var p = Instantiate(projectile, origin, Quaternion.identity);

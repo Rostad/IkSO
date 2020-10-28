@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa8b2cb35209524ea4e5499eaafb698, type: 3}
   m_Name: RadiationWeapon
   m_EditorClassIdentifier: 
-  RPM: 400
+  RPM: 200
+  damage: 8
+  attributeType: 1
   projectile: {fileID: 2286448984339087208, guid: edac17e96e9358746a920be460e7b017,
     type: 3}
-  projectileSpeed: 20
+  projectileSpeed: 25
